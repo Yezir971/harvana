@@ -1,18 +1,21 @@
 <?php
+$title = "Harvana";
+
 
 
 ?>
 
 
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<?php include('assets/inc/head.inc.php');?>
 </head>
 <body>
+    <p>salut ! </p>
+    <button><a href="signUp.php"> Go S'inscrire</a></button>
+
+
+
+
+<?php include('assets/inc/footer.inc.php'); ?>
     
-</body>
-</html>
+
