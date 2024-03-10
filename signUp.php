@@ -3,9 +3,9 @@ session_start();
 require ("./assets/class/Autoloader.php");
 Autoloader::register();
 
-$Bdd = new Bdd();
-
-$Bdd->createAccount();
+// $Bdd = new Bdd();
+$sign = new Mdp();
+$sign->mdpOk();
 
 $title="Création de compte";
 
@@ -15,8 +15,8 @@ $title="Création de compte";
 </head>
 <body>
     <form action="#" method="post">
-        <label for="name">Nom</label>
-        <input name="nom" id="name" type="text" placeholder="Votre nom">
+        <label for="firstname">Prénom</label>
+        <input type="text" id="firstname" placeholder="Votre prénom" name="firstname">
 
         <label for="email">mail</label>
         <input id="email" type="email" placeholder="Votre mail" name="email">
@@ -28,7 +28,7 @@ $title="Création de compte";
         <input name="mdp2" id="confirmMdp" type="password" placeholder="Confirmer votre mot de passe">
 
         <input type="submit" value="S'inscire" name="signButton">
-        <a href="login.php">Déja un compte ?</a>
+        <a href="login">Déja un compte ?</a>
     </form>
 
 <?php include('assets/inc/footer.inc.php');?>

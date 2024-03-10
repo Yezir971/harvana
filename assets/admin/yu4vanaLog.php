@@ -1,23 +1,19 @@
 <?php
 session_start();
-require ("./assets/class/Autoloader.php");
-Autoloader::register();
 
-$log = new Connexion();
+require ('../class/ConnexionAdmin.class.php');
+
+$log = new ConnexionAdmin();
 $log->verifierCompte();
 
-
-
-
-
-
-$title="Connexion harvana";
+$title ="Admin : Connexion Harvana";
 
 ?>
 
-<?php include('assets/inc/head.inc.php');?>
+<?php include('../inc/head.inc.php');?>
 </head>
 <body>
+    <h1>Connexion admin</h1>
     <form action="#" method="post">
         <label for="firstname">Prénom</label>
         <input type="text" id="firstname" placeholder="Votre prénom" name="firstname">
@@ -31,4 +27,4 @@ $title="Connexion harvana";
         <input type="submit" value="Se connecter" name="logButton">
     </form>
 
-<?php include('assets/inc/footer.inc.php'); ?>
+<?php include('../inc/footer.inc.php'); ?>

@@ -75,19 +75,33 @@ class Bdd{
      *
      * @param string $email
      * @param string $password
-     * @return void
+     * @return string
      */
     public function createAccount(){ 
         if(isset($_POST["signButton"]) && $_POST["signButton"]=="S'inscire"){
             $email = $_POST['email'];
             $password = $_POST['mdp1'];
-            $user = $this->getPdo()->prepare('INSERT INTO `user`( `email`, `password` ) VALUES (
-                :email,
-                :password
-            )');
-            $user->bindvalue(':email',$email,PDO::PARAM_STR);
-            $user->bindValue(':password',password_hash($password,PASSWORD_DEFAULT),PDO::PARAM_STR);
-            $user->execute();
+            $firstname = $_POST['firstname'];
+
+            $uniqueUser = $this->getPdo()->prepare('SELECT email from user WHERE email = :emailTest');
+            $uniqueUser->bindvalue(':emailTest',$email,PDO::PARAM_STR);
+            $uniqueUser->execute();
+            if($uniqueUser->rowCount() !=0){
+                echo "<p class='error'>Cette adresse mail est déjà utilisé</p>";
+            }else{
+                $user = $this->getPdo()->prepare('INSERT INTO `user`( `firstname`,`email`, `password` ) VALUES (
+                    :firstname,
+                    :email,
+                    :password
+                )');
+                $user->bindvalue(':email',$email,PDO::PARAM_STR);
+                $user->bindValue(':password',password_hash($password,PASSWORD_DEFAULT),PDO::PARAM_STR);
+                $user->bindValue(':firstname',$firstname,PDO::PARAM_STR);
+                $user->execute();
+                header('location: login');
+                exit();
+
+            }
         }
         
     }

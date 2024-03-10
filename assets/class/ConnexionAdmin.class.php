@@ -2,7 +2,7 @@
 
 require "Bdd.class.php";
 
-class Connexion extends Bdd{
+class ConnexionAdmin extends Bdd{
 
     /**
      * connecte la personne à son compte
@@ -16,8 +16,7 @@ class Connexion extends Bdd{
             extract($_POST);
 
             $pdoStatement = parent::getPdo()->prepare('SELECT `id`, `email`,`password`,`status`,`visibility`, `firstname` FROM `user` WHERE email =:email ');
-            // On binde ':nom' et on lui atitre la valeur contenu dans la variable $nom idem pour ':prenom'.
-            // $_POST['lastname']
+
             $pdoStatement->bindValue(':email',$email,PDO::PARAM_STR);
             
             $pdoStatement->execute();
@@ -36,10 +35,14 @@ class Connexion extends Bdd{
                     $_SESSION['member']['status']=$verification['status'];
                     $_SESSION['member']['visibility']=$verification['visibility'];
                     
-                    // var_dump($_SESSION['member']);      
-
-                    header("location: hebdo");
-                    exit();
+                    // var_dump($_SESSION['member']);
+                    
+                    if($_SESSION['member']['status'] == 1 ){
+                        header("location: yu4vana");
+                        exit();
+                    }else{
+                        return "<p class='error'>Vous n'êtes pas autorisé à accéder à la partie admin</p>";
+                    }
                 }else{
                     echo "<p>Le mot de passe n'est pas correcte</p>";
                 }

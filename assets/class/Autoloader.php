@@ -13,7 +13,7 @@ class Autoloader{
         // $class_name = str_replace("ConnexionMdp\\", '',$class_name);
         // var_dump($class_name);
         if($class_name != 'PDO'){
-            require 'assets/class/' . $class_name . '.class.php';
+            require __DIR__ ."/". $class_name . '.class.php';
         }
     }
 }

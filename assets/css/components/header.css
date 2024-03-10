@@ -1,0 +1,27 @@
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --backgroundError : rgb(216, 15, 15) ; 
+    --backgroundErrorBorder : rgb(216, 15, 15) ; 
+    --backgroundSuccess : rgb(7, 255, 32) ; 
+    --backgroundSuccessBorder :3px solid var rgb(77, 255, 7) ; 
+}
+
+.error, .success{
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    margin: 5px 0 10px 0;
+}
+.error{
+    background: var(--backgroundError);
+    border: var(--backgroundErrorBorder);
+}
+.success{
+    background: var(--backgroundSuccess);
+    border: var(--backgroundSuccessBorder);
+}
+
