@@ -98,8 +98,8 @@ class Bdd{
                 $user->bindValue(':password',password_hash($password,PASSWORD_DEFAULT),PDO::PARAM_STR);
                 $user->bindValue(':firstname',$firstname,PDO::PARAM_STR);
                 $user->execute();
-                header('location: login');
-                exit();
+                // header('location: login');
+                // exit();
 
             }
         }

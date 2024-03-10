@@ -29,8 +29,10 @@ class Admin extends Bdd{
         
         // var_dump($keys);
         // var_dump($_SESSION);
+        echo '<th>sélection</th><th>id</th><th>email</th><th>nom</th><th>status</th><th>visibilité</th><th>supprimer</th><th>visibilité</th>';
         for($key = 0; $key < count($keys);$key++){
             echo '<tr>';
+            echo '<td><input type="checkbox" value="'.$key.'" name="'.$key.'"</td>';
             echo '<td>'.$keys[$key]['id'].'</td>';
             echo '<td>'.$keys[$key]['email'].'</td>';
             echo '<td>'.$keys[$key]['firstname'].'</td>';
@@ -40,6 +42,7 @@ class Admin extends Bdd{
             echo '<td><a href="yu4vana?see='. $keys[$key]['id'] . '">visibilité</a></td>';
             // echo '<td> <form action="#" method="post"><input type="hidden" name="idCount" value="'. $key + 1 .'"><input type="submit" name="deleteCount" value="Supprimer"></form></td>';
             echo '</tr>';
+            
             
             if(isset($_GET['see']) && $_SESSION['member']['status']==1){
                 if($_GET['deleteAccount'] != $_SESSION['member']['id']){
@@ -72,6 +75,37 @@ class Admin extends Bdd{
                 exit();
             }
         }
+        // var_dump(count($_POST));
+        // echo $_POST[$key];
+        // var_dump(count($_POST));
+        if(isset($_POST['supprId'])){
+            $table = array('test..');
+            // var_dump($_POST);
+            
+            $cout = count($_POST);
+            for($i=0 ; $i<$cout ; $i++){
+                $table.array_push($table, $i);
+            }
+            var_dump($table);
+
+            // for($i=1; $i<count($_POST);$i++){
+    
+            //             $delete = $this->getPdo()->prepare("DELETE FROM user WHERE id=:key AND status =0;");
+        
+            //             $delete->bindValue(':key',$i,PDO::PARAM_INT);
+                        
+            //             $delete->execute();
+
+            //     }
+                
+            // }
+            // $delete2 = $this->getPdo()->prepare("SET @num := 0;
+            // UPDATE user SET id = @num := (@num+1);
+            // ALTER TABLE user AUTO_INCREMENT = 1;");
+            // $delete2->execute();
+            // header('location : yu4vana');
+            // exit();
+        }
     }
 
     /**
@@ -100,46 +134,6 @@ class Admin extends Bdd{
         }
     } 
     
-    public function visibilityAccess() {
-        if(isset($_POST['changeVisibility']) && $_POST['changeVisibility']=="Envoyer") {
-            $email = $_POST['email'];
-            $user = $this->getPdo()->prepare('SELECT * FROM user WHERE email = :email');
-            $user->bindValue(':email',$email,PDO::PARAM_STR);
-            $user->execute();
-            /*
-            $keys = $user->fetchAll();
-            
-            foreach($keys as $key){//on affiche toutes les données dans un formulaire et on place ça dans le html grâce à l'appelle de la fonction
-                echo "<label for='visibility'>Visibilité</label>
-                <input type='text' id='visibility' name='visibility' placeholder='changer la visibilité' value='".$key['visibility']."'>
-
-                <label for='emailChange' >Mail</label>
-                <input type='text' id='emailChange' value='".$key['visibility']."' name=''>
-
-                
-                <input type='submit' name='newVisibility'>
-                <input type='submit' name='cancel' value='Annuler'>
-                ";
-            }
-
-            if(isset($_POST['annuler']) && $_POST['annuler']=='Annuler'){
-                $_POST['buttonPrint']='Close';
-            }
-
-            if(isset($_POST['newVisibility'])){
-            $user = $this->getPdo()->prepare("UPDATE `user` SET `name`=:nameSkill ,
-            `level`=:level,
-            `description`=:description,
-            `levelClass`=:levelClass
-            WHERE email =:email2");
-
-            $user->bindValue(':nameSkill',strip_tags($_POST['nameUpdate']),PDO::PARAM_STR);
-
-            $user->execute();
-        }
-            */
-        }
-    }
 
     public function search() {
         $_GET["terme"] = htmlspecialchars($_GET["terme"]); //pour sécuriser le formulaire contre les failles html
@@ -154,4 +148,5 @@ class Admin extends Bdd{
         }
         // var_dump($user);
     }
+
 }

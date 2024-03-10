@@ -29,6 +29,24 @@ $title ="Admin : Harvana";
         <input type = "search" name = "terme">
         <input type = "submit" name = "s" value = "Rechercher">
     </form>
+    <!-- <form action="#" method="post"> -->
+        <?php 
+        // $table = [];
+        // for($i=1;$i<10 ;$i++){
+            ?>
+            <!-- <input type="checkbox" value="<?=$i?>" name ="<?=$i?>"> -->
+            <?php
+        //     if(isset($_POST[$i]) == true && isset($_POST)){
+        //         // $table.array_push($table, $i);
+        //         // $table.clear();
+        //         // echo "coucou";
+        //     }
+        // }
+        // var_dump($table);
+        // var_dump($_POST);
+    //     ?>
+    <!-- //     <input type="submit" value="buttonTest">
+    // </form> -->
 
 
     <form action="#" method="post">
@@ -36,7 +54,10 @@ $title ="Admin : Harvana";
     </form>
     <main>
         <table>
-        <?=$admin->affichePerso();?>
+            <form action="#" method="post">
+                <?=$admin->affichePerso();?>
+                <input type="submit" name="supprId" value="supprimer">
+            </form>
         </table>
     </main>
     <section>
