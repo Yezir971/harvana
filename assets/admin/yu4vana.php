@@ -11,6 +11,7 @@ $session->destroy();
 $admin = new Admin();
 
 $admin->insertTaux();
+$admin->deleteAccount();
 $title ="Admin : Harvana";
 
 ?>
@@ -22,45 +23,27 @@ $title ="Admin : Harvana";
 </head>
 <body>
 
-    <p>Bienvenue sur la page Admin</p>
+    <h1>Bienvenue sur la page Admin</h1>
 
 
     <form action = "#" method = "get">
         <input type = "search" name = "terme">
         <input type = "submit" name = "s" value = "Rechercher">
     </form>
-    <!-- <form action="#" method="post"> -->
-        <?php 
-        // $table = [];
-        // for($i=1;$i<10 ;$i++){
-            ?>
-            <!-- <input type="checkbox" value="<?=$i?>" name ="<?=$i?>"> -->
-            <?php
-        //     if(isset($_POST[$i]) == true && isset($_POST)){
-        //         // $table.array_push($table, $i);
-        //         // $table.clear();
-        //         // echo "coucou";
-        //     }
-        // }
-        // var_dump($table);
-        // var_dump($_POST);
-    //     ?>
-    <!-- //     <input type="submit" value="buttonTest">
-    // </form> -->
-
-
     <form action="#" method="post">
         <input type="submit" value="Déconnexion" name="decoSession">
     </form>
     <main>
         <table>
-            <form action="#" method="post">
-                <?=$admin->affichePerso();?>
-                <input type="submit" name="supprId" value="supprimer">
-            </form>
+            <?=$admin->affichePerso();?>
         </table>
     </main>
+
     <section>
+        <h2>taux de la semaine</h2>
+        <table>
+            <?=$admin->tauxAdmin();?>
+        </table>
         <form action="#" method="post">
             <label for="taux">Taux de la semaine</label>
             <input type="text" name="taux">

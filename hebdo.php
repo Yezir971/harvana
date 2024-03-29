@@ -9,7 +9,7 @@ $session->destroyHebdo();
 
 $info = new Hebdo();
 $title ="Hebdomadaire : Harvana";
-var_dump($_SESSION);
+// var_dump($_SESSION);
 
 
 ?>
