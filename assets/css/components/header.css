@@ -54,7 +54,14 @@ a{
     top: 0px;
     height: 100vh;
     z-index: 1;
-    background: red;
+
+    background: rgba(255, 255, 255, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(255, 255, 255, 0.43);
+
     transform: translateX(50%);/* On indique ici que notre menu va translater de la droite vers la gauche, d'une distance équivalante à 50% de l'écran*/
     animation: apparition .6s ease-in-out forwards;/*On utilise animation pour créer une animation que l'on nomme apparition, le temps de l'animation va durer 0.6s, être rapide au début et lent à la fin*/
     /*forwards sert à faire en sorte que à la fin de l'animation le menu hamburger reste fixe*/
@@ -80,4 +87,31 @@ a{
     border: solid black 1px;
     width: 70%;
     margin: 31% 15% 0;
+}
+/*On donne une position finale aux 2 barres du menu hamburger */
+.croix{
+    position: absolute;
+    top: 3px;
+    transition: 0.5s;
+
+}
+.angleBarre1{
+    transform: rotate(45deg);
+
+}
+.angleBarre2{
+    transform: rotate(-45deg);
+}
+
+
+nav ul{
+    padding: 0 20px 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+.logo-reseaux ul{
+    display: flex;
+    flex-direction: row;
 }

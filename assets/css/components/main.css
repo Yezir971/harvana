@@ -1,18 +1,23 @@
 h1{
     font-weight: bold;
 }
-
 .button{
     border-radius: 30px;
     font-family: Futura-Black;
     padding: 5px;
+    height: 40px;
+    border: none;
 }
-.black{
+button a{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+button .black{
     background: black;
     color: white;
 }
-.gray{
-    background: gray;
+button .gray{
+    background: #EDEDED;
     color: black;
 }
 h2{
@@ -21,13 +26,19 @@ h2{
 }
 .card{
     width: 160px;
-    height: 350px;
-    box-shadow: 3px 2px 4px rgb(194, 194, 194);
+    height: 200px;
+    box-shadow: 3px 2px 4px #EDEDED;
     border-radius: 3px;
 }
 .card p{
-    color: gray;
+    color: #EDEDED;
 }
 p{
-    margin: 10px
+    margin: 10px;
+    text-align: justify;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
 }
