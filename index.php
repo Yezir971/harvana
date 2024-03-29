@@ -14,8 +14,8 @@ $title = "Harvana | Investissement trading crypto";
         <h1 id="investissement">Investi dans Ton Futur aveSeven Liberty</h1>
         <p>joins toi à la communauté d'investissement et fait le premier pas vers la liberté financière. Fait confiance à notre équipe d'investissement trading crypto. Il font le travail pour toi !</p>
 
-        <button class="button grey"><a href="signUp.php">S'inscrire</a></button>
-        <button class="button"><a href="signUp.php">Nous contacter</a></button>
+        <button class="button black"><a href="signUp.php">S'inscrire</a></button>
+        <button class="button gray"><a href="signUp.php">Nous contacter</a></button>
     </main>
     <section aria-labelledby="choix">
         <h2 id="choix">Pourquoi nous choisir ?</h2>

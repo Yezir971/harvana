@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Futura;
 }
 :root{
     --backgroundError : rgb(216, 15, 15) ; 
@@ -25,3 +26,58 @@
     border: var(--backgroundSuccessBorder);
 }
 
+@font-face {
+    font-family: Futura;
+    src: url("./Futura\ Medium\ BT.ttf");
+}
+@font-face {
+    font-family: Futura-Black;
+    src: url("./Futura\ Extra\ Black\ BT.ttf");
+}
+
+
+#container{
+    padding:10px;
+}
+
+
+
+
+.off{
+    display: none;
+}
+.hide{
+    display: flex;
+    position: fixed;
+    padding-top: 25px;
+    right: 0;
+    top: 0px;
+    height: 100vh;
+    z-index: 1;
+    background: var(--coleurSecondaire);
+    transform: translateX(50%);/* On indique ici que notre menu va translater de la droite vers la gauche, d'une distance équivalante à 50% de l'écran*/
+    animation: apparition .6s ease-in-out forwards;/*On utilise animation pour créer une animation que l'on nomme apparition, le temps de l'animation va durer 0.6s, être rapide au début et lent à la fin*/
+    /*forwards sert à faire en sorte que à la fin de l'animation le menu hamburger reste fixe*/
+    opacity: 0;/* Opacity 0 pour que notre éléments soit invisible au début puis apparaît progressivement grâce au keyframes*/
+}
+/* Nous sert à créer l'animation d'apparition du menu nav sur la version mobile */
+@keyframes apparition { /*Permet de déclarer un ensemble d'étape clée pour l'animation apparition*/
+    100%{/*Cela indique que les styles spécifiés à l'intérieur des accolades suivantes s'appliqueront lorsque l'animation atteindra 100% de sa progression. En d'autres termes, à la fin de l'animation.*/
+        opacity: 1;/*Pour que l'élément soit visible à la fin */
+        transform:none;  /*Cela réinitialise toute transformation appliquée à l'élément*/  
+    }
+}
+.menuHamburger{
+    width: 30px;
+    height: 30px;
+    position: fixed ;
+    right: 20px;
+    top: 27px;
+    z-index: 2;
+    border-radius: 10px;
+}
+.menuHamburger div{
+    border: solid var(--couleurTexte) 1px;
+    width: 70%;
+    margin: 31% 15% 0;
+}

@@ -1,0 +1,27 @@
+h1{
+    font-weight: bold;
+}
+
+.button{
+    border-radius: 30px;
+    font-family: Futura-Black;
+}
+.black{
+    background: black;
+    color: white;
+}
+.gray{
+    background: gray;
+    color: black;
+}
+h2{
+    margin-top: 140px;
+    font-weight: bold;
+}
+.card{
+    box-shadow: 0px 2px 2px gray;
+    border-radius: 3px;
+}
+.card p{
+    color: gray;
+}

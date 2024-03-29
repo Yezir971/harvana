@@ -16,6 +16,7 @@ $title="Connexion harvana";
 ?>
 
 <?php include('assets/inc/head.inc.php');?>
+<?php include('assets/inc/header.inc.php');?>
 </head>
 <body>
     <form action="#" method="post">
