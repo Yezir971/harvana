@@ -1,7 +1,7 @@
 img{
     height: 250px;
     width: auto;
-    border: 20px;
+    border-radius: 20px;
 }
 h1{
     font-weight: bold;
