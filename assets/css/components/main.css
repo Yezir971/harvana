@@ -1,6 +1,6 @@
-img{
+.invest{
     height: 250px;
-    width: auto;
+    width: 250px;
     border-radius: 20px;
 }
 h1{
@@ -16,18 +16,19 @@ h1{
 button a{
     padding-left: 5px;
     padding-right: 5px;
+    font-weight: bold;
 }
-button .black{
+.black{
     background: black;
     color: white;
 }
-.gray p{
+.gray{
     background: #EDEDED;
 }
-.gray p{
+.gray a{
     color: black;
 }
-.black{
+.black a{
     color: #EDEDED;
 }
 h2{
@@ -52,4 +53,8 @@ ul{
     display: flex;
     flex-wrap: wrap;
     gap: 35px;
+    padding-left: 18px;
+}
+h3{
+    text-align: center;
 }
