@@ -1,3 +1,8 @@
+img{
+    height: 250px;
+    width: auto;
+    border: 20px;
+}
 h1{
     font-weight: bold;
 }
@@ -16,9 +21,14 @@ button .black{
     background: black;
     color: white;
 }
-button .gray{
+.gray p{
     background: #EDEDED;
+}
+.gray p{
     color: black;
+}
+.black{
+    color: #EDEDED;
 }
 h2{
     margin-top: 140px;

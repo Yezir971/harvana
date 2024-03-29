@@ -15,6 +15,8 @@ $title="Création de compte";
 <?php include('assets/inc/header.inc.php');?>
 </head>
 <body>
+    <img src="./assets/img/img_harvana_2.png" alt="representation de l'argent investis par les utilisateurs via les tradeurs qui gère la crypto monnaie">
+
     <form action="#" method="post">
         <label for="firstname">Prénom</label>
         <input type="text" id="firstname" placeholder="Votre prénom" name="firstname">
