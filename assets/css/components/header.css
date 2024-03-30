@@ -34,7 +34,7 @@ header{
 }
 
 #container{
-    padding:10px;
+    padding:20px;
     width: 98vw;
     /* background: #F5F5DC; */
     overflow: hidden;
@@ -89,8 +89,8 @@ a:hover{
     width: 30px;
     height: 30px;
     position: fixed ;
-    right: 20px;
-    top: 33px;
+    right: 34px;
+    top: 45px;
     z-index: 2;
     border-radius: 10px;
 }

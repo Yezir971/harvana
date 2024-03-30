@@ -2,7 +2,7 @@
     height: 250px;
     width: 250px;
     border-radius: 20px;
-    margin: auto;
+    margin: 0px auto 20px auto;
 }
 h1{
     font-weight: bold;

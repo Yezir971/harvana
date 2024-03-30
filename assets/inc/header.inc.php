@@ -14,9 +14,9 @@
             <li class="barre"><a role="menuitem" aria-label="page des politiques de confidentialité" href="">Politique de confidentialité</a></li>
             <li class="barre logo-reseaux">
                 <ul>
-                    <li><a role="menuitem" aria-label="réseaux instagram" target="_blank" class="logoReseaux"><img src="./assets/img/instagram.svg" alt=""></a></li>
-                    <li><a role="menuitem" aria-label="réseaux TikTok" target="_blank" class="logoReseaux"><img src="./assets/img/tiktok.svg" alt=""></a></li>
-                    <li><a role="menuitem" aria-label="réseaux Twitter" target="_blank" class="logoReseaux"><img src="./assets/img/x-twitter.svg" alt=""></a></li>
+                    <li><a href="https://www.instagram.com" role="menuitem" aria-label="réseaux instagram" target="_blank" class="logoReseaux"><img src="./assets/img/instagram.svg" alt=""></a></li>
+                    <li><a href="https://tiktok.com" role="menuitem" aria-label="réseaux TikTok" target="_blank" class="logoReseaux"><img src="./assets/img/tiktok.svg" alt=""></a></li>
+                    <li><a href="https://twitter.com" role="menuitem" aria-label="réseaux Twitter" target="_blank" class="logoReseaux"><img src="./assets/img/x-twitter.svg" alt=""></a></li>
                     <!-- <li><a role="menuitem" aria-label="réseaux linkedin" target="_blank" class="logReseaux"><img src="#" alt=""></a></li> -->
                 </ul>
             </li>
