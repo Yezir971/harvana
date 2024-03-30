@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: Futura;
     /* border: 1px solid red; */
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 
@@ -22,26 +23,36 @@
     border: var(--backgroundSuccessBorder);
 }
 
-@font-face {
-    font-family: Futura;
-    src: url("./Futura\ Medium\ BT.ttf");
-}
-@font-face {
-    font-family: Futura-Black;
-    src: url("./Futura\ Extra\ Black\ BT.ttf");
-}
 
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 6px 40px 6px;
+}
+.texteDescription{
+    margin: 30px 0;
+}
 
 #container{
     padding:10px;
-    width: 100vw;
+    width: 98vw;
+    /* background: #F5F5DC; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
-
+.big{
+    font-size: large;
+}
 li{
     list-style: none;
 }
 a{
     text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
 }
 .off{
     display: none;
@@ -79,7 +90,7 @@ a{
     height: 30px;
     position: fixed ;
     right: 20px;
-    top: 27px;
+    top: 33px;
     z-index: 2;
     border-radius: 10px;
 }

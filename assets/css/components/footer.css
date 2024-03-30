@@ -1,5 +1,23 @@
 footer{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 30px;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+}
+footer div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+}
+footer p{
+    text-align: center;
+}
+footer a img{
+    width: 40px;
+    background: black;
+    border-radius: 50%;
+    padding: 7px;
 }

@@ -1,5 +1,6 @@
 <div id="container">
 <header>
+    <div><strong class="big"><a href="index.php">Seven Liberty</a></strong></div>
     <nav>
         <div class="menuHamburger">        
             <div id="barre1"></div>

@@ -2,6 +2,7 @@
     height: 250px;
     width: 250px;
     border-radius: 20px;
+    margin: auto;
 }
 h1{
     font-weight: bold;
@@ -24,6 +25,7 @@ button a{
 }
 .gray{
     background: #EDEDED;
+    margin-left: 10px;
 }
 .gray a{
     color: black;
@@ -32,22 +34,26 @@ button a{
     color: #EDEDED;
 }
 h2{
-    margin-top: 140px;
+    margin-top: 100px;
     font-weight: bold;
+}
+section ul{
+    justify-content: center;
 }
 .card{
     width: 160px;
     height: 200px;
-    box-shadow: 3px 2px 4px #EDEDED;
+    box-shadow: 3px 2px 6px #EDEDED;
     border-radius: 3px;
+    margin-top: 20px;
 }
 .card p{
     color: #6B6B6B;
-    text-align: start;
+    /* text-align: start; */
 }
 p{
-    margin: 10px;
-    text-align: justify;
+    /* margin: 10px; */
+    text-align: start
 }
 ul{
     display: flex;
