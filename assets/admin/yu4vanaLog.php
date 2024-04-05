@@ -27,4 +27,4 @@ $title ="Admin : Connexion Harvana";
         <input type="submit" value="Se connecter" name="logButton">
     </form>
 
-<?php include('../inc/footer.inc.php'); ?>
+<?php include('../inc/footerAdmin.inc.php'); ?>

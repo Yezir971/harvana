@@ -29,28 +29,44 @@ class Admin extends Bdd{
         
         // var_dump($keys);
         // var_dump($_SESSION);
-        echo '<th>id</th><th>email</th><th>nom</th><th>status</th><th>visibilité</th><th>supprimer</th><th>visibilité</th>';
+        // echo '<th>email</th><th>nom</th><th>status</th><th>visibilité</th><th>supprimer</th><th>visibilité</th>';
+        echo '<th>email</th><th>status</th><th>supprimer</th><th>visibilité</th>';
         for($key = 0; $key < count($keys);$key++){
             echo '<tr>';
-            // echo '<td><input type="checkbox" value="'.$key.'" name="'.$key.'"></td>';
-            echo '<td>'.$keys[$key]['id'].'</td>';
+            
+            // echo '<td>'.$keys[$key]['id'].'</td>';
+            // echo '<td>'.$keys[$key]['firstname'].'</td>';
+            
+            //poubelle
             echo '<td>'.$keys[$key]['email'].'</td>';
-            echo '<td>'.$keys[$key]['firstname'].'</td>';
             echo '<td>'.$keys[$key]['status'].'</td>';
-            echo '<td>'.$keys[$key]['visibility'].'</td>';
-            echo '<td><a href="yu4vana?deleteAccount='. $keys[$key]['id'] . '">Supprimer</a></td>';
-            echo '<td><a href="yu4vana?see='. $keys[$key]['id'] . '">visibilité</a></td>';
+            // echo '<td>'.$keys[$key]['visibility'].'</td>';
+            echo $keys[$key]['visibility'] != 1 ? '<td><a href="yu4vana?see='. $keys[$key]['id'] . '"> <img src="../img/eye-slash-solid.svg"></a></td>' : '<td><a href="yu4vana?see='. $keys[$key]['id'] . '"><img src="../img/eye-solid"></a></td>'; 
+            // echo '<td><a href="yu4vana?see='. $keys[$key]['id'] . '">' .
+            //     $keys[$key]['visibility'] == 1 ? '<img src="../img/eye-slash-solid.svg"> </a> </td>' : '<img src="../img/eye-solid"></a></td>';
+            echo '<td><a href="yu4vana?deleteAccount='. $keys[$key]['id'] . '"><img src="../img/trash-can-solid.svg"></a></td>';
             // echo '<td> <form action="#" method="post"><input type="hidden" name="idCount" value="'. $key + 1 .'"><input type="submit" name="deleteCount" value="Supprimer"></form></td>';
             echo '</tr>';
-            
+
             
             if(isset($_GET['see']) && $_SESSION['member']['status']==1){
+                $recupVisibility = $this->getPdo()->prepare("SELECT visibility FROM user WHERE id=".$_GET['see']);
+                $recupVisibility->execute();
+                $keys = $recupVisibility->fetchAll();
+
+
+            
                 if($_GET['see'] != $_SESSION['member']['id']){
-                    $user = $this->getPdo()->prepare("UPDATE `user` SET `visibility`=1 WHERE id=".$_GET['see']);
-                    // $user->bindvalue(':id',$id,PDO::PARAM_INT);
-                    
-                    $user->execute(); 
-                }else{
+                    if($keys[0]['visibility'] == 1){
+                        $user = $this->getPdo()->prepare("UPDATE `user` SET `visibility`=0 WHERE id=".$_GET['see']);
+                        $user->execute(); 
+                    }else{
+                        $user = $this->getPdo()->prepare("UPDATE `user` SET `visibility`=1 WHERE id=".$_GET['see']);
+                        $user->execute(); 
+                    }
+
+                }
+                else{
                     echo "Vous ne pouvez pas changer les droits de visibiilité de se compte !";
                 }
                 header('location: yu4vana');
@@ -106,7 +122,7 @@ class Admin extends Bdd{
             echo "<p class='error'>Vous ne pouvez pas supprimer se compte !</p>";
         }
         else if(isset($_GET["messageError"]) && $_GET["messageError"]=="false"){
-            echo "<p class='success'>Compte supprimé avec succés !</p>";
+            echo "<p class='success'>Compte supprimé avec succès !</p>";
         }
     }
     /**

@@ -27,14 +27,14 @@ $title ="Admin : Harvana";
 
 
     <form action = "#" method = "get">
-        <input type = "search" name = "terme">
+        <input type = "search" placeholder="Recherche par e-mail" name = "terme">
         <input type = "submit" name = "s" value = "Rechercher">
     </form>
     <form action="#" method="post">
         <input type="submit" value="Déconnexion" name="decoSession">
     </form>
     <main>
-        <table>
+        <table id="tableauUtilisateursAdmin">
             <?=$admin->affichePerso();?>
         </table>
     </main>
@@ -50,4 +50,4 @@ $title ="Admin : Harvana";
             <input type="submit" value="Envoyer" name="insertButton">
         </form>
     </section>
-<?php include('../inc/footer.inc.php'); ?>
+<?php include('../inc/footerAdmin.inc.php'); ?>
