@@ -1,1 +1,43 @@
+.stockImg{
+    position: relative;
+}
+.stockImg #imgSignUp{
+    width: 100vw;
+}
+.stockImg h1{
+    font-weight: bold;
+    position: absolute;
+    font-size: xx-large;
+    color: white;
+    top: 5%;
+    left: 5%;
+    font-size: 150%;
+}
 
+form{
+    display: flex;
+    gap: 5px;
+    width: 90vw;
+    margin: 20px auto;
+    flex-direction: column;
+}
+input{
+    margin-bottom: 20px;
+    min-height: 20px;
+    border: none;
+}
+input[type="text"], input[type="password"], input[type="email"]{
+    padding: 16px;
+    border-radius: 10px;
+    background: #EDEDED;
+    border: none;
+}
+
+input[type="submit"]{
+    background: black;
+    color: white;
+    border-radius: 30px;
+    height: 40px;
+    margin-top: 40px;
+    cursor:pointer;
+}

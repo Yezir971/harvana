@@ -5,7 +5,6 @@ Autoloader::register();
 
 // $Bdd = new Bdd();
 $sign = new Mdp();
-$sign->mdpOk();
 
 $title="Création de compte";
 
@@ -15,7 +14,10 @@ $title="Création de compte";
 <?php include('assets/inc/header.inc.php');?>
 </head>
 <body>
-    <img src="./assets/img/img_harvana_2.png" alt="representation de l'argent investis par les utilisateurs via les tradeurs qui gère la crypto monnaie">
+    <div class="stockImg">
+        <img id="imgSignUp" src="./assets/img/img_harvana_2.png" alt="representation de l'argent investis par les utilisateurs via les tradeurs qui gère la crypto monnaie">
+        <h1>Investis dans ton futur avec Seven Liberty</h1>
+    </div>
 
     <form action="#" method="post">
         <label for="firstname">Prénom</label>
@@ -26,11 +28,13 @@ $title="Création de compte";
 
         <label for="mdp">Mot de passe</label>
         <input name="mdp1" id="mdp" type="password" placeholder="Votre mot de passe">
-
+        
+        
         <label for="confirmMdp">Confirmer votre mot de passe</label>
         <input name="mdp2" id="confirmMdp" type="password" placeholder="Confirmer votre mot de passe">
-
-        <input type="submit" value="S'inscire" name="signButton">
+        <?php $sign->mdpOk(); ?>
+        
+        <input type="submit" value="S'INSCRIRE" name="signButton">
         <a href="login">Déja un compte ?</a>
     </form>
 
