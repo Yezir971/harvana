@@ -18,7 +18,7 @@ $title ="Admin : Harvana";
 
 
 
-<?php include('../inc/head.inc.php');?>
+<?php include('../inc/headAdmin.inc.php');?>
 
 </head>
 <body>

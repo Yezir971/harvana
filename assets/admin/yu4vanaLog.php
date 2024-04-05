@@ -10,7 +10,7 @@ $title ="Admin : Connexion Harvana";
 
 ?>
 
-<?php include('../inc/head.inc.php');?>
+<?php include('../inc/headAdmin.inc.php');?>
 </head>
 <body>
     <h1>Connexion admin</h1>

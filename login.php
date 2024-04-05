@@ -4,7 +4,7 @@ require ("./assets/class/Autoloader.php");
 Autoloader::register();
 
 $log = new Connexion();
-$log->verifierCompte();
+
 
 
 
@@ -28,6 +28,8 @@ $title="Connexion harvana";
 
         <label for="password">Mot de passe</label>
         <input type="password" id="password" name="mdp">
+
+        <?php $log->verifierCompte(); ?>
 
         <input type="submit" value="Se connecter" name="logButton">
     </form>
