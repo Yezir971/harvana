@@ -1,15 +1,7 @@
 input[type="search"]{
     border: solid 1px black;
 }
-#tableauUtilisateursAdmin{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
 
-#tableauUtilisateursAdmin th{
-    display: none;
-}
 #tableauUtilisateursAdmin div{
     border: 2px solid black;
 }
@@ -20,7 +12,7 @@ input[type="search"]{
     padding-bottom: 50px;
 }
 table tr:nth-child(odd){
-    background-color:rgb(106, 103, 103);
+    background-color:rgb(180, 177, 177);
 }
 table, td, tr, th{
     border-collapse: collapse;
@@ -28,4 +20,45 @@ table, td, tr, th{
 #tableauUtilisateursAdmin img{
     width: 20px;
     height: 20px;
+}
+table{
+    margin: auto;
+    width: 90%;
+
+}
+td,th,tr{
+    height: 40px;
+    min-width: 10 0px;
+
+}
+
+tbody{
+    margin: auto;
+
+}
+td{
+    text-align: center;
+    padding: 0 10px;
+
+
+}
+tr td:nth-child(0n+1){
+    overflow-x: scroll;
+    max-width: 200px;
+    
+}
+.titreTaux{
+    text-align: center;
+    margin-bottom: 20px;
+}
+@media screen and (min-width:904px){
+
+    tr td:nth-child(0n+1){
+        overflow-x:initial;
+
+    }
+
+
+
+    
 }

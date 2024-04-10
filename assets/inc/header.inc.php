@@ -11,7 +11,7 @@
             <li class="barre"><a role="menuitem" aria-label="page s'inscrire" href="login.php">Se connecter</a></li>
             <li class="barre"><a role="menuitem" aria-label="page nous contacter" href="#contactFooter">Nous contacter</a></li>
             <li class="barre"><a role="menuitem" aria-label="page condition générales" href="">Conditions générales</a></li>
-            <li class="barre"><a role="menuitem" aria-label="page des politiques de confidentialité" href="">Politique de confidentialité</a></li>
+            <li class="barre"><a role="menuitem" aria-label="page des politiques de confidentialité" href="confidential.php">Politique de confidentialité</a></li>
             <li class="barre logo-reseaux">
                 <ul>
                     <li><a href="https://tiktok.com" role="menuitem" aria-label="réseaux TikTok" target="_blank" class="logoReseaux"><img src="./assets/img/tiktok.svg" alt=""></a></li>

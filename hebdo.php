@@ -27,8 +27,8 @@ $title ="Hebdomadaire : Harvana";
     </form>
     <table>
         <tr>
-            <th>taux</th>
-            <th>date</th>
+            <th>Taux</th>
+            <th>Date de mise à jour</th>
         </tr>
         <?php $info->taux() ;?>
         

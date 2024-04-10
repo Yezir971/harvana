@@ -7,7 +7,7 @@ class Admin extends Bdd{
      * @return void
      */
     public function affichePerso(){
-        if(isset($_GET["s"]) && $_GET["s"] == "Rechercher"){
+        if(isset($_GET["s"]) && $_GET["s"] == "Rechercher / Réinitialiser"){
             $user = $this->getPdo()->prepare('SELECT id,firstname,email,status,visibility FROM `user` WHERE email LIKE ? ');
             $_GET["terme"] = htmlspecialchars($_GET["terme"]); //pour sécuriser le formulaire contre les failles html
             $terme = $_GET["terme"];
@@ -29,23 +29,13 @@ class Admin extends Bdd{
         
         // var_dump($keys);
         // var_dump($_SESSION);
-        // echo '<th>email</th><th>nom</th><th>status</th><th>visibilité</th><th>supprimer</th><th>visibilité</th>';
-        echo '<th>email</th><th>status</th><th>supprimer</th><th>visibilité</th>';
+        echo '<th>Email</th><th>Status</th><th>Visibilité</th><th>Supprimer</th>';
         for($key = 0; $key < count($keys);$key++){
             echo '<tr>';
-            
-            // echo '<td>'.$keys[$key]['id'].'</td>';
-            // echo '<td>'.$keys[$key]['firstname'].'</td>';
-            
-            //poubelle
             echo '<td>'.$keys[$key]['email'].'</td>';
             echo '<td>'.$keys[$key]['status'].'</td>';
-            // echo '<td>'.$keys[$key]['visibility'].'</td>';
             echo $keys[$key]['visibility'] != 1 ? '<td><a href="yu4vana?see='. $keys[$key]['id'] . '"> <img src="../img/eye-slash-solid.svg"></a></td>' : '<td><a href="yu4vana?see='. $keys[$key]['id'] . '"><img src="../img/eye-solid"></a></td>'; 
-            // echo '<td><a href="yu4vana?see='. $keys[$key]['id'] . '">' .
-            //     $keys[$key]['visibility'] == 1 ? '<img src="../img/eye-slash-solid.svg"> </a> </td>' : '<img src="../img/eye-solid"></a></td>';
             echo '<td><a href="yu4vana?deleteAccount='. $keys[$key]['id'] . '"><img src="../img/trash-can-solid.svg"></a></td>';
-            // echo '<td> <form action="#" method="post"><input type="hidden" name="idCount" value="'. $key + 1 .'"><input type="submit" name="deleteCount" value="Supprimer"></form></td>';
             echo '</tr>';
 
             
@@ -133,7 +123,7 @@ class Admin extends Bdd{
     public function tauxAdmin(){
         $info = $this->getPdo()->prepare('SELECT DATE_FORMAT(`date`, "%d/%m/%Y à %H:%i:%s") AS `date`, `taux` FROM `hebdo`');
         $info->execute();
-        
+        echo '<th>Taux</th><th>Date/Heure</th>';
         $keys = $info->fetchAll();
    
         foreach($keys as $key){

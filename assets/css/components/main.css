@@ -68,3 +68,25 @@ ul{
 h3{
     text-align: center;
 }
+@media screen and (min-width:750px) {
+    main, button,h2{
+        margin: auto;
+    }
+    button a,h2{
+        text-align: center;
+    }
+    .card{
+        width: 15rem;
+        height: 15rem;
+        margin-bottom: 150px;
+    }
+    h2{
+        margin-top: 150px;
+    }
+    p{
+        text-align: center;
+    }
+    a{
+        text-align: center;
+    }
+}

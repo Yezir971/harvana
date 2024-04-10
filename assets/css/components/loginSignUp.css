@@ -41,3 +41,6 @@ input[type="submit"]{
     margin-top: 40px;
     cursor:pointer;
 }
+form a{
+    max-width: 138px;
+}

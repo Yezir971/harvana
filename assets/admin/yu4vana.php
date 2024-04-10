@@ -28,7 +28,7 @@ $title ="Admin : Harvana";
 
     <form action = "#" method = "get">
         <input type = "search" placeholder="Recherche par e-mail" name = "terme">
-        <input type = "submit" name = "s" value = "Rechercher">
+        <input type = "submit" name = "s" value = "Rechercher / Réinitialiser">
     </form>
     <form action="#" method="post">
         <input type="submit" value="Déconnexion" name="decoSession">
@@ -40,7 +40,7 @@ $title ="Admin : Harvana";
     </main>
 
     <section>
-        <h2>taux de la semaine</h2>
+        <h2 class="titreTaux">Taux de la semaine</h2>
         <table>
             <?=$admin->tauxAdmin();?>
         </table>
