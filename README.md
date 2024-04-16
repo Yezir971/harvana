@@ -1,6 +1,6 @@
 # Harvana
 
-## Site web crée par Charly Planquette and James Ahmedaly
+## Site web crée par @Charlydrax Planquette and James Ahmedaly
 
 ## Description
 
