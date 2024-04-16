@@ -26,7 +26,7 @@ input{
     min-height: 20px;
     border: none;
 }
-input[type="text"], input[type="password"], input[type="email"]{
+input[type="text"], input[type="password"], input[type="email"],input[type="search"]{
     padding: 16px;
     border-radius: 10px;
     background: #EDEDED;

@@ -5,7 +5,7 @@
             <div id="barre1"></div>
             <div id="barre2"></div>
         </div>
-        <ul role="menu" class="off" id="menu">
+        <ul role="menu" class="off listNav" id="menu">
             <li><a role="menuitem" aria-label="Seven Liberty logo retour page accueil" href="index.php">Seven Liberty logo</a></li>
             <li class="barre"><a role="menuitem" aria-label="page s'inscrire" href="signUp.php">S'inscrire</a></li>
             <li class="barre"><a role="menuitem" aria-label="page s'inscrire" href="login.php">Se connecter</a></li>

@@ -34,6 +34,7 @@ button a{
     color: #EDEDED;
 }
 h2{
+    font-size: 2    rem;
     margin-top: 100px;
     font-weight: bold;
 }
@@ -75,9 +76,45 @@ h3{
     button a,h2{
         text-align: center;
     }
+    section .texteDescription {
+        font-size: 20rem;
+        font-size: 150%;
+        max-width: 100%;
+        text-align: center;
+        padding: 0 10%;
+
+    }
+    .big{
+        font-size: xxx-large ;
+    }
+
+    main h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+    main p{
+        max-width: 800px;
+        font-size: 150%;
+        text-align: center;
+    }
+    .button{
+        /* width: 150%; */
+        font-size: 120%;
+    }
+    .invest{
+        margin-top: 125px;
+    }
+    main{
+        /* margin-top: 150px; */
+        margin-bottom: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .card{
-        width: 15rem;
-        height: 15rem;
+        width: 17rem;
+        height: 20rem;
         margin-bottom: 150px;
     }
     h2{

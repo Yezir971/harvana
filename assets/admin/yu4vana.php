@@ -26,9 +26,9 @@ $title ="Admin : Harvana";
     <h1>Bienvenue sur la page Admin</h1>
 
 
-    <form action = "#" method = "get">
+    <form action = "#" method = "get" class="searchFlex">
         <input type = "search" placeholder="Recherche par e-mail" name = "terme">
-        <input type = "submit" name = "s" value = "Rechercher / Réinitialiser">
+        <input type = "submit" name = "s" value = "Rechercher / Reinitialiser">
     </form>
     <form action="#" method="post">
         <input type="submit" value="Déconnexion" name="decoSession">
@@ -50,4 +50,6 @@ $title ="Admin : Harvana";
             <input type="submit" value="Envoyer" name="insertButton">
         </form>
     </section>
-<?php include('../inc/footerAdmin.inc.php'); ?>
+<?php include('../inc/footerAdmin.inc.php'); 
+echo $_SERVER["REQUEST_URI"];
+var_dump($_SERVER);
