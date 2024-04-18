@@ -65,6 +65,7 @@ ul{
     flex-wrap: wrap;
     gap: 35px;
     padding-left: 18px;
+    justify-content: center;
 }
 h3{
     text-align: center;
@@ -87,7 +88,10 @@ h3{
     .big{
         font-size: xxx-large ;
     }
-
+    .titleAccount{
+        text-align: center;
+        margin-top: 20px;
+    }
     main h1{
         font-size: 3rem;
         text-align: center;

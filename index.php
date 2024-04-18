@@ -22,6 +22,7 @@ $title = "Harvana | Investissement trading crypto";
 
             </div>
         </main>
+        
         <section aria-labelledby="choix">
             <h2 id="choix">Pourquoi nous choisir ?</h2>
             <p class="texteDescription">Découvrez les avantages d’investir avec Seven Liberty et comment nous pouvons faire évoluer votre investissement trading crypto.</p>
@@ -41,6 +42,7 @@ $title = "Harvana | Investissement trading crypto";
                 </li>
             </ul>
         </section>
+        
 
 
         <?php include('assets/inc/footer.inc.php'); ?>

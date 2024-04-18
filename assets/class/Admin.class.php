@@ -113,7 +113,7 @@ class Admin extends Bdd{
 
     public function deleteAccount(){
         if(isset($_GET["messageError"]) && $_GET["messageError"]=="true" ){
-            echo "<p class='error'>Vous ne pouvez pas supprimer se compte !</p>";
+            echo "<p class='error'>Vous ne pouvez pas supprimer ce compte !</p>";
         }
         else if(isset($_GET["messageError"]) && $_GET["messageError"]=="false"){
             echo "<p class='success'>Compte supprimé avec succès !</p>";
@@ -157,6 +157,8 @@ class Admin extends Bdd{
         $info->bindValue(':tauxParPage', $tauxParPage, PDO::PARAM_INT);
         $info->execute();
 
+
+        
         echo '<th>Taux</th><th>Date/Heure</th>';
         $keys = $info->fetchAll();
    
@@ -194,20 +196,5 @@ class Admin extends Bdd{
         <?php
 
     }
-
-    // public function pagination() {
-    //     $sql = 'SELECT * FROM `hebdo` ORDER BY `created_at` DESC;';
-
-    //     // On prépare la requête
-    //     $query = $this->getPdo()->prepare($sql);
-
-    //     // On exécute
-    //     $query->execute();
-
-    //     // On récupère les valeurs dans un tableau associatif
-    //     $articles = $query->fetchAll(PDO::FETCH_ASSOC);
-    
-        
-    // }
 }
 

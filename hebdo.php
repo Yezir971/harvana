@@ -21,7 +21,7 @@ $title ="Hebdomadaire : Harvana";
 </head>
 <body>
 
-    <h1>Bienvenue sur la page hebdomadaire <?= $session->get_info('firstname')?></h1>
+    <h1 class="titleAccount">Bienvenue sur la page hebdomadaire <?= $session->get_info('firstname')?></h1>
     <form action="#" method="post">
         <input type="submit" value="Déconnexion" name="decoSession">
     </form>

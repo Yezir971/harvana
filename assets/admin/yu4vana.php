@@ -50,6 +50,4 @@ $title ="Admin : Harvana";
             <input type="submit" value="Envoyer" name="insertButton">
         </form>
     </section>
-<?php include('../inc/footerAdmin.inc.php'); 
-echo $_SERVER["REQUEST_URI"];
-var_dump($_SERVER);
+<?php include('../inc/footerAdmin.inc.php');
