@@ -19,6 +19,7 @@ $title="Connexion harvana";
 <?php include('assets/inc/header.inc.php');?>
 </head>
 <body>
+    <?php $log->messageAccount(); ?>
     <form action="#" method="post">
         <label for="firstname">Prénom</label>
         <input type="text" id="firstname" placeholder="Votre prénom" name="firstname">
@@ -27,7 +28,7 @@ $title="Connexion harvana";
         <input type="email" id="email" placeholder="Votre mail" name="email">
 
         <label for="password">Mot de passe</label>
-        <input type="password" id="password" name="mdp">
+        <input type="password" id="password" name="mdp" placeholder="Votre mot de passe">
 
         <?php $log->verifierCompte(); ?>
 

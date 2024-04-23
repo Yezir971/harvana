@@ -42,7 +42,7 @@ class Mdp extends Bdd{
     // propriété qui va vérifier si le mot de passe de confirmation est identique au premier mot de passe 
     public static function mdpCompare(string $data1,string $data2): string{
         if($data1 != $data2){
-            self::$content .= "<p class='error'>les mdp sont différents</p>";
+            self::$content .= "<p class='error'Les mots de passe sont différents</p>";
         }
         // echo self::$content;
         return self::$content;
@@ -55,10 +55,9 @@ class Mdp extends Bdd{
                 $this->createAccount();
             }else{
                 echo self::$content;
-                echo "<p class='error'>Votre compte n'a pas été créer</p>";
+                echo "<p class='error'>Votre compte n'a pas été créé</p>";
 
             }
         }
-        
     }
 }

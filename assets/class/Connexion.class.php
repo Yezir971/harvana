@@ -49,5 +49,10 @@ class Connexion extends Bdd{
         }
 
     }
+    public function messageAccount(){
+        if(isset($_GET["messageError"]) && $_GET["messageError"]=="true" ){
+            echo "<p class='success'>Votre compte à bien été créé !</p>";
+        }
+    }
    
 }

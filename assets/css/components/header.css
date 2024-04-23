@@ -30,6 +30,9 @@ header{
     justify-content: space-between;
     margin: 30px 6px 40px 6px;
 }
+.logoHarvana{
+    max-width: 200px;
+}
 .texteDescription{
     margin: 30px 0;
 }
@@ -61,6 +64,12 @@ a:hover{
 }
 .off{
     display: none;
+}
+.hide .logoHarvana{
+    transition: 0.5s;
+    position: absolute;
+    left: 70px;
+    top: 10px;
 }
 .hide{
     display: flex;
@@ -95,7 +104,7 @@ a:hover{
     height: 30px;
     position: fixed ;
     right: 34px;
-    top: 26px;
+    top: 43px;
     z-index: 2;
     border-radius: 10px;
 }
@@ -144,4 +153,26 @@ header nav ul{
 .logoReseaux img{
     width: 36px;
     height: 36px;
+}
+.shadowLogo{
+    filter: drop-shadow(0 0 0.75rem rgb(245, 241, 242));
+}
+@media  screen and (min-width:478px) {
+    @keyframes logoUpdate { /*Permet de déclarer un ensemble d'étape clée pour l'animation apparition*/
+        from{
+            max-width: 200px;
+        }
+        to{
+            max-width: 250px;
+        }
+    }
+    .logoHarvana{
+        animation: logoUpdate .5s ease-in-out forwards;
+    }
+    .hide .logoHarvana{
+        animation: logoUpdate .5s ease-in-out forwards;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+    }
 }

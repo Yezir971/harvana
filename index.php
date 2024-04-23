@@ -18,7 +18,7 @@ $title = "Harvana | Investissement trading crypto";
             <div>
 
                 <button class="button black"><a href="signUp.php">S'INSCRIRE</a></button>
-                <button class="button gray"><a href="signUp.php">NOUS CONTACTER</a></button>
+                <button class="button gray"><a href="#contactFooter">NOUS CONTACTER</a></button>
 
             </div>
         </main>

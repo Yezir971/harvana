@@ -7,7 +7,6 @@ Autoloader::register();
 $sign = new Mdp();
 
 $title="Création de compte";
-
 ?>
 
 <?php include('assets/inc/head.inc.php');?>
@@ -19,7 +18,7 @@ $title="Création de compte";
         <h1>Investis dans ton futur avec Seven Liberty</h1>
     </div>
 
-    <form action="#" method="post">
+    <form action="" method="post">
         <label for="firstname">Prénom</label>
         <input type="text" id="firstname" placeholder="Votre prénom" name="firstname">
 
@@ -37,5 +36,6 @@ $title="Création de compte";
         <input type="submit" value="S'INSCRIRE" name="signButton">
         <a href="login">Déja un compte ?</a>
     </form>
+    
 
 <?php include('assets/inc/footer.inc.php');?>

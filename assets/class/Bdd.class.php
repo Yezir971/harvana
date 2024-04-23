@@ -78,7 +78,7 @@ class Bdd{
      * @return string
      */
     public function createAccount(){ 
-        if(isset($_POST["signButton"]) && $_POST["signButton"]=="S'inscire"){
+        if(isset($_POST["signButton"]) && $_POST["signButton"]=="S'INSCRIRE"){
             $email = $_POST['email'];
             $password = $_POST['mdp1'];
             $firstname = $_POST['firstname'];
@@ -94,16 +94,15 @@ class Bdd{
                     :email,
                     :password
                 )');
-                $user->bindvalue(':email',$email,PDO::PARAM_STR);
+                $user->bindvalue(':email',strip_tags($email),PDO::PARAM_STR);
                 $user->bindValue(':password',password_hash($password,PASSWORD_DEFAULT),PDO::PARAM_STR);
-                $user->bindValue(':firstname',$firstname,PDO::PARAM_STR);
+                $user->bindValue(':firstname',strip_tags($firstname),PDO::PARAM_STR);
                 $user->execute();
-                // header('location: login');
-                // exit();
+                header('location: login?messageError=true');
+                exit();
 
             }
         }
-        
     }
 }
 
