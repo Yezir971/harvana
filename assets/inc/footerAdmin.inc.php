@@ -7,7 +7,7 @@
             <a href="https://www.instagram.com/"><img src="../img/instagram.svg" alt="logo de instagram"></a>
             <a href="https://twitter.com"><img src="../img/x-twitter.svg" alt="logo de twitter"></a>
         </div>
-        <p>© 2024 Seven Liberty <a href="">tout droits réservé</a></p>
+        <p>© 2024 Seven Liberty <a href=""> tout droits réservé</a></p>
     </footer>
     <script src="assets/js/app.js"></script>
 </body>

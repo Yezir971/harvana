@@ -12,7 +12,7 @@ $title = "Harvana | Investissement trading crypto";
         <?php include('assets/inc/header.inc.php'); ?>
         <img src="./assets/img/img_harvana_1.png" class="invest" alt="representation de l'argent investis par les utilisateurs via les tradeurs qui gère la crypto monnaie">
         <main aria-labelledby="investissement">
-            <h1 id="investissement">Investi dans Ton Futur avec Seven Liberty</h1>
+            <h1 id="investissement">Investis dans Ton Futur avec Seven Liberty</h1>
             <p class="texteDescription">Joins toi à la communauté d'investissement et fait le premier pas vers la liberté financière. Fait confiance à notre équipe d'investissement trading crypto. Il font le travail pour toi !</p>
 
             <div>

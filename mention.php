@@ -1,6 +1,6 @@
 <?php
 
-$title ="Politique de confidentialité : Harvana";
+$title ="Mentions légale : Harvana";
 ?>
 
 
@@ -10,9 +10,9 @@ $title ="Politique de confidentialité : Harvana";
 </head>
 <body>
     <?php include('assets/inc/header.inc.php'); ?>
-    <p><a href="index">Accueil</a> > <a href="#">Politique de confidentialités</a></p>
+    <p><a href="index">Accueil</a> > <a href="#">Mentions légale</a></p>
 
-    <h1>Les politiques</h1>
+    <h1>Mentions légale</h1>
 
 
 
